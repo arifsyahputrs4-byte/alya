@@ -1,71 +1,158 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Selamat Ulang Tahun, Alya Ramadhani 💖</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kejutan dari Arif 💌</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Great+Vibes&family=Dancing+Script&display=swap');
+
     body {
-      background: linear-gradient(135deg, #ff69b4, #ffb6c1, #ffc0cb);
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      text-align: center;
-      padding: 50px;
-      overflow-x: hidden;
-      position: relative;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #ff9ac9, #ffd1dc);
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
     }
-    .balloon { position: absolute; width: 50px; height: 70px; background: radial-gradient(circle, #ff1493, #ff69b4); border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; animation: float 6s ease-in-out infinite; opacity: 0.7; }
-    .balloon:nth-child(1){left:10%;animation-delay:0s}.balloon:nth-child(2){left:20%;animation-delay:1s}.balloon:nth-child(3){left:30%;animation-delay:2s}.balloon:nth-child(4){left:40%;animation-delay:3s}.balloon:nth-child(5){left:50%;animation-delay:4s}.balloon:nth-child(6){left:60%;animation-delay:5s}.balloon:nth-child(7){left:70%;animation-delay:6s}.balloon:nth-child(8){left:80%;animation-delay:7s}.balloon:nth-child(9){left:90%;animation-delay:8s}
-    @keyframes float{0%,100%{transform:translateY(0px)}50%{transform:translateY(-20px)}}
-    h1{color:#ff1493;text-shadow:3px 3px 6px rgba(0,0,0,0.4);font-size:3em;animation:glow 2s ease-in-out infinite alternate;}
-    @keyframes glow{from{text-shadow:3px 3px 6px rgba(0,0,0,0.4);}to{text-shadow:3px 3px 20px rgba(255,20,147,0.8);}}
-    p{font-size:20px;color:#333;line-height:1.6;}
-    .login-form{display:block;margin:0 auto;width:400px;padding:30px;border:4px solid #ff1493;border-radius:20px;background:rgba(255,255,255,0.95);box-shadow:0 10px 30px rgba(0,0,0,0.2);}
-    .birthday-content{display:none;margin-top:50px;animation:fadeIn 1.5s ease-out;}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-    button{padding:15px 30px;background:linear-gradient(45deg,#ff69b4,#ff1493);color:white;border:none;border-radius:15px;cursor:pointer;font-size:18px;font-weight:bold;transition:all 0.4s ease;}
-    button:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(0,0,0,0.3);}
-    img{max-width:450px;border-radius:25px;border:8px solid white;box-shadow:0 5px 15px rgba(0,0,0,0.3);}
-    .cake{font-size:4em;animation:bounce 1s infinite;}
-    @keyframes bounce{0%,20%,50%,80%,100%{transform:translateY(0);}40%{transform:translateY(-10px);}60%{transform:translateY(-5px);}}
+
+    .container {
+      text-align: center;
+      background: #fff8fb;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 350px;
+      width: 90%;
+      animation: fadeIn 1s ease;
+      transition: opacity 1s ease;
+    }
+
+    h1 {
+      font-family: "Great Vibes", cursive;
+      font-size: 34px;
+      color: #ff4b9b;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-family: 'Dancing Script', cursive;
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 25px;
+      line-height: 1.4em;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 2px solid #ff8fc6;
+      border-radius: 10px;
+      outline: none;
+      font-size: 15px;
+      margin-bottom: 15px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #ff4b9b;
+      box-shadow: 0 0 5px rgba(255, 75, 155, 0.4);
+    }
+
+    button {
+      background: linear-gradient(90deg, #ff4b9b, #ff7bbd);
+      color: white;
+      border: none;
+      padding: 12px 0;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #ff7bbd, #ff4b9b);
+    }
+
+    .hearts {
+      font-size: 24px;
+      margin: 10px 0;
+      animation: float 2s infinite ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .surprise {
+      display: none;
+      text-align: center;
+      animation: fadeIn 1.5s ease forwards;
+      color: #ff4b9b;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    .surprise h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .surprise p {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
-  <!-- Dekorasi Balon -->
-  <div class="balloon"></div><div class="balloon"></div><div class="balloon"></div><div class="balloon"></div><div class="balloon"></div><div class="balloon"></div><div class="balloon"></div><div class="balloon"></div><div class="balloon"></div>
-
-  <div id="login-section">
+  <div class="container" id="formBox">
     <h1>Hai, Alya 💕</h1>
-    <p>Masukkan nama dan kata sandi rahasiamu untuk membuka kejutan spesial dari Arif 💌</p>
-    <form class="login-form" onsubmit="login(event)">
-      <label for="name">Nama:</label><br>
-      <input type="text" id="name" required placeholder="Masukkan namamu" style="padding:10px;border-radius:10px;border:2px solid #ff69b4;"><br><br>
-      <label for="password">Kata Sandi:</label><br>
-      <input type="password" id="password" required placeholder="Masukkan kata sandi" style="padding:10px;border-radius:10px;border:2px solid #ff69b4;"><br><br>
-      <button type="submit">Buka Kejutan 💖</button>
-    </form>
+    <div class="hearts">💖💞</div>
+    <p>Masukkan nama dan kata sandi rahasiamu<br>untuk membuka kejutan spesial dari Arif 💌</p>
+
+    <input type="text" id="nama" placeholder="Masukkan namamu" />
+    <input type="password" id="sandi" placeholder="Masukkan kata sandi" />
+    <button onclick="bukaKejutan()">Buka Kejutan 💝</button>
   </div>
 
-  <div id="birthday-section" class="birthday-content">
-    <h1>Selamat Ulang Tahun, Alya Ramadhani 🎂</h1>
-    <p>Sayangku Alya 💕</p>
-    <p>Hari ini adalah hari yang paling indah, karena dunia diberkahi dengan kehadiranmu.  
-    Semoga semua kebahagiaan, cinta, dan keberkahan selalu menyertai langkahmu.  
-    Kamu adalah alasan senyumku setiap hari — dan aku bersyukur bisa mengenalmu. 🌹</p>
-    <div class="cake">🎂🍰</div>
-    <img src="photo_6318928277732527316_y.jpg" alt="Foto Alya dan Arif">
-    <p>Dari Arif — yang selalu ingin melihatmu bahagia, hari ini, esok, dan selamanya 💞</p>
+  <div class="surprise" id="surpriseBox">
+    <h2>🎉 Hai Alya! 🎉</h2>
+    <p>Terima kasih sudah membuka kejutan ini 💖<br>
+    Kamu adalah sosok yang istimewa dan selalu membawa warna di hari Arif 🌸</p>
+    <div style="font-size:28px; margin-top:15px;">💌💞🌷✨</div>
   </div>
 
   <script>
-    function login(event) {
-      event.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const pw = document.getElementById("password").value.trim();
-      if (name === "Alya Ramadhani" && pw === "Arif") {
-        document.getElementById("login-section").style.display = "none";
-        document.getElementById("birthday-section").style.display = "block";
+    function bukaKejutan() {
+      const nama = document.getElementById("nama").value.trim();
+      const sandi = document.getElementById("sandi").value.trim();
+      const formBox = document.getElementById("formBox");
+      const surpriseBox = document.getElementById("surpriseBox");
+
+      if (nama && sandi) {
+        formBox.classList.add("fade-out");
+        setTimeout(() => {
+          formBox.style.display = "none";
+          surpriseBox.style.display = "block";
+        }, 1000);
       } else {
-        alert("Nama atau kata sandi salah 😅 Coba lagi ya, Alya!");
+        alert("Masukkan nama dan kata sandi dulu ya 💕");
       }
     }
   </script>
